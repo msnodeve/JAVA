@@ -5,7 +5,7 @@ target/
  
 # OS Files #
 .DS_Store
-  
+.vscode
 *.class
  
 # Package Files #
