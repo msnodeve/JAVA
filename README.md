@@ -46,6 +46,14 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 - 데이터베이스 이름과 테이블 이름이 코드에있는 것과 같아야 합니다.
 - 서버가 없고, 서버를 어떻게 만들어야하는지 모르시면 다음 링크를 따라 해주세요.
 [CentOS!](https://www.youtube.com/playlist?list=PLnae-xjNaVaYND3eKBV4DXrLOQBeXmwyl)
+- DB Connector jar 파일이 외부 라이브러리에 포함 되어 있어야합니다.
+```
+    https://www.mysql.com/ > downloads > Community > MySQL Connectors > Connector/J
+    > Select Operaing System : Platform Independent
+    > Platform Independent (Architecture Independent), ZIP Archive Download
+    > 압축 풀기 > mysql-connctor-java-폴더 > mysql-connector-java-version.jar 파일 Copy
+    > C:\Program Files\Java\jdk1.8.0_191\jre\lib\ext 위치에 붙여넣기
+```
 
 ```
     자신의 Server On > mysql start
