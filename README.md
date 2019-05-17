@@ -11,10 +11,13 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 <p>각 폴더가 각각의 프로젝트이므로 내부 주석을 보면서 이해해주시길 바랍니다.</p>
 
 * * *
-# 확인 부탁 드림
+### 확인 부탁 드림
 ```
     시스템 환경변수 > JAVA_HOME 설정
     시스템 환경변수 > classpath 설정 되어있다면 삭제 해주십시오.
+    또 cmd 창에서 컴파일시 "error: unmappable character for encoding MS949" 에러 문구가 뜬다면
+    > javac Main.java -encoding utf8
+    utf8로 인코딩하여 컴파일 해주시기 바랍니다.
 ```
 
 * * * 
@@ -34,4 +37,19 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
     > javac *.java
     > java Server
     > java Client
+```
+### 03.데이터베이스 내용 출력하기
+<p>사전 작업이 필요합니다.</p>
+
+- 자신의 서버가 필요합니다.
+- 서버에 mysql이 설치 되어 있어야 합니다.
+- 데이터베이스 이름과 테이블 이름이 코드에있는 것과 같아야 합니다.
+- 서버가 없고, 서버를 어떻게 만들어야하는지 모르시면 다음 링크를 따라 해주세요.
+[CentOS!](https://www.youtube.com/playlist?list=PLnae-xjNaVaYND3eKBV4DXrLOQBeXmwyl)
+
+```
+    자신의 Server On > mysql start
+    03.네트워크를 통해 파일 전송하기 > cmd(명령 프롬프트) 실행
+    > javac Main.java
+    > java Main
 ```
