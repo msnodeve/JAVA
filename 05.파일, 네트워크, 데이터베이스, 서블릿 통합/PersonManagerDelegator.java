@@ -20,7 +20,7 @@ public class PersonManagerDelegator{
     }
     // 데이터베이스를 직접 연결해서 내용 들고오기 위한 생성자
 	public PersonManagerDelegator(Connection conn, MyEventListener listener) throws Exception {
-		//personManager = new GetAddressFromDB(conn,listener);
+		personManager = new GetAddressFromDB(conn,listener);
 	}
     // 서블릿을 통해 내용 들고오기 위한 생성자
 	public PersonManagerDelegator(URL url, MyEventListener listener) throws Exception {

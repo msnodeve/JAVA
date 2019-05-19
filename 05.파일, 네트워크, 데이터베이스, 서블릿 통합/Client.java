@@ -11,14 +11,16 @@ public class Client implements MyEventListener{
         // fileDelegator.start();
 
         // 2. 네트워크
-        Socket socket = new Socket("localhost", 1000);
-        PersonManagerDelegator socketDelegator = new PersonManagerDelegator(socket, client);
-        socketDelegator.start();
-        // 3. 데이터베이스 접속
-        // Connection connection = DriverManager.getConnection("jdbc:mysql://192.168.177.128/web?user=mskim&password=1234&serverTimezone=UTC&useSSL=false");
-        // PersonManagerDelegator delegator = new PersonManagerDelegator(conn, client);
+        // Socket socket = new Socket("localhost", 1000);
+        // PersonManagerDelegator socketDelegator = new PersonManagerDelegator(socket, client);
+        // socketDelegator.start();
 
-        //
+        // 3. 데이터베이스
+        Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.177.129/web?user=mskim&password=1234&serverTimezone=UTC&useSSL=false");
+        PersonManagerDelegator dbDelegator = new PersonManagerDelegator(conn, client);
+        dbDelegator.start();
+
+        // 4. 서블릿
 
     }
     public void complete(ArrayList<Person> list,String threadName) {
