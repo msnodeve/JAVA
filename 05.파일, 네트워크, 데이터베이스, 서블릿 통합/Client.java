@@ -25,8 +25,11 @@ public class Client implements MyEventListener{
     }
     public void complete(ArrayList<Person> list,String threadName) {
 		System.out.println("Thread 이름 : " + threadName + " complete");
-		for(int i=0;i<list.size();i++)
-			System.out.println(list.get(i).getData("name"));
+		for(int i=0;i<list.size();i++){
+            System.out.println("학번 : " + list.get(i).getData("hakbun") + ", 전화번호 : " + list.get(i).getData("tel")
+            + ", 주민등록번호 : " + list.get(i).getData("jumin") + ", 주소 : " + list.get(i).getData("address")
+            + ", 이름 : " + list.get(i).getData("name"));
+        }
 	}
 
 	public void complete(Object object,String threadName) {
