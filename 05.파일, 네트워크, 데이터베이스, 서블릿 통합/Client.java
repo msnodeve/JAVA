@@ -7,9 +7,13 @@ public class Client implements MyEventListener{
         Client client = new Client();
 
         // 1. 파일
-        PersonManagerDelegator fileDelegator = new PersonManagerDelegator("address.txt",client);
-        fileDelegator.start();
+        // PersonManagerDelegator fileDelegator = new PersonManagerDelegator("address.txt",client);
+        // fileDelegator.start();
 
+        // 2. 네트워크
+        Socket socket = new Socket("localhost", 1000);
+        PersonManagerDelegator socketDelegator = new PersonManagerDelegator(socket, client);
+        socketDelegator.start();
         // 3. 데이터베이스 접속
         // Connection connection = DriverManager.getConnection("jdbc:mysql://192.168.177.128/web?user=mskim&password=1234&serverTimezone=UTC&useSSL=false");
         // PersonManagerDelegator delegator = new PersonManagerDelegator(conn, client);

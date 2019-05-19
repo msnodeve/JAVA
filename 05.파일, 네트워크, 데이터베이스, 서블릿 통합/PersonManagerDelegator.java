@@ -16,7 +16,7 @@ public class PersonManagerDelegator{
     }
     // 네트워크를 통해 내용 들고오기 위한 생성자
     public PersonManagerDelegator(Socket socket, MyEventListener listener) throws Exception {
-		//personManager = new GetAddressFromSocket(socket,listener);
+		personManager = new GetAddressFromSocket(socket,listener);
     }
     // 데이터베이스를 직접 연결해서 내용 들고오기 위한 생성자
 	public PersonManagerDelegator(Connection conn, MyEventListener listener) throws Exception {
