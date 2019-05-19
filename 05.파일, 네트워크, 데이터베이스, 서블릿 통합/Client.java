@@ -16,13 +16,17 @@ public class Client implements MyEventListener{
         // socketDelegator.start();
 
         // 3. 데이터베이스
-        Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.177.129/web?user=mskim&password=1234&serverTimezone=UTC&useSSL=false");
-        PersonManagerDelegator dbDelegator = new PersonManagerDelegator(conn, client);
-        dbDelegator.start();
+        // Connection conn = DriverManager.getConnection("jdbc:mysql://192.168.177.129/web?user=mskim&password=1234&serverTimezone=UTC&useSSL=false");
+        // PersonManagerDelegator dbDelegator = new PersonManagerDelegator(conn, client);
+        // dbDelegator.start();
 
         // 4. 서블릿
+        URL url = new URL("http://192.168.177.129/ServletObject");
+        PersonManagerDelegator servletDelegator = new PersonManagerDelegator(url, client);
+        servletDelegator.start();
 
     }
+    // ArrayList 형태로 저장 되었을 경우
     public void complete(ArrayList<Person> list,String threadName) {
 		System.out.println("Thread 이름 : " + threadName + " complete");
 		for(int i=0;i<list.size();i++){
@@ -31,7 +35,7 @@ public class Client implements MyEventListener{
             + ", 이름 : " + list.get(i).getData("name"));
         }
 	}
-
+    // 객체 형태로 저장 되었을 경우
 	public void complete(Object object,String threadName) {
 		System.out.println("Thread 이름 : " + threadName + " complete");
 		PersonManager manager = (PersonManager)object;

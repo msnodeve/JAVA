@@ -24,7 +24,7 @@ public class PersonManagerDelegator{
 	}
     // 서블릿을 통해 내용 들고오기 위한 생성자
 	public PersonManagerDelegator(URL url, MyEventListener listener) throws Exception {
-		//personManager = new GetAddressFromServlet(url,listener);
+		personManager = new GetAddressFromServlet(url,listener);
     }
     public void start(){
         try{
