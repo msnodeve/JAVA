@@ -88,7 +88,31 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
     자신의 Server On > mysql start
     04.서블릿을 통해 받아온 내용 출력하기 > cmd(명령 프롬프트) 실행
     > javac *.java
-    > Server의 /usr/java/jdk1.8.0_211-amd64/jre/lib/ext 에 GetServlet.class, Person.class를 Copy
+    > Server의 /usr/tomcat/webapps/ROOT/WEB-INF/classes 에 GetServlet.class, Person.class를 Copy
     > Server의 /usr/tomcat/bin > ./shutdown.sh > ./startup.sh
     > java Main
+```
+
+### 05.파일, 네트워크, 데이터베이스, 서블릿 통합
+<p>사전 작업이 필요합니다.</p>
+
+- 03.데이터베이스 내용 출력하기, 04.서블릿을 통해 받아온 내용 출력하기 프로젝트를 먼저 수행하세요.
+- 서버가 없고, Tomcat을 어떻게 설치해야하고, Tomcat을 수행하는 방법을 모르시면 다음 링크를 따라 해주세요.<br>
+[우리 함께 Servlet에 대해서 알아봅시다!](https://www.youtube.com/playlist?list=PLnae-xjNaVaYND3eKBV4DXrLOQBeXmwyl)
+- servlet-api jar 파일이 Server의 외부 라이브러리에 또 포함 되어 있어야합니다.<br>
+이유 : 04.프로젝트는 Server에서 DB를 접속해서 서버 DB Connector를 포함했지만 이제 Server에서 Servlet 코드를 작성해 컴파일 해야 하기 때문에  Server에 servlet-api jar 파일이 필요합니다.
+```
+    Server(서버 컴퓨터)에서 수행해야할 작업입니다!
+    > /usr/tomcat/lib > servlet-api.jar Copy
+    > /usr/java/jdk1.8.0_211-amd64/jre/lib/ext 위치에 붙여넣기
+```
+
+```
+    자신의 Server On > mysql start
+    05.파일, 네트워크, 데이터베이스, 서블릿 통합 > cmd(명령 프롬프트) 실행
+    Client.java 에서 원하는 코드에서 주석을 제거
+    > javac *.java
+    > Server의 /usr/tomcat/webapps/ROOT/WEB-INF/classes 에 ServletObject.class, Person.class를 Copy
+    > Server의 /usr/tomcat/bin > ./shutdown.sh > ./startup.sh
+    > java Client
 ```

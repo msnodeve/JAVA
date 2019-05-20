@@ -7,8 +7,8 @@ public class Client implements MyEventListener{
         Client client = new Client();
 
         // 1. 파일
-        // PersonManagerDelegator fileDelegator = new PersonManagerDelegator("address.txt",client);
-        // fileDelegator.start();
+        PersonManagerDelegator fileDelegator = new PersonManagerDelegator("address.txt",client);
+        fileDelegator.start();
 
         // 2. 네트워크
         // Socket socket = new Socket("localhost", 1000);
@@ -21,9 +21,9 @@ public class Client implements MyEventListener{
         // dbDelegator.start();
 
         // 4. 서블릿
-        URL url = new URL("http://192.168.177.129/ServletObject");
-        PersonManagerDelegator servletDelegator = new PersonManagerDelegator(url, client);
-        servletDelegator.start();
+        // URL url = new URL("http://192.168.177.129/ServletObject");
+        // PersonManagerDelegator servletDelegator = new PersonManagerDelegator(url, client);
+        // servletDelegator.start();
 
     }
     // ArrayList 형태로 저장 되었을 경우

@@ -1,5 +1,0 @@
-hakbun=201011001/name=이방원/tel=010-1111-2222/jumin=981225-1234567/address=부산시
-hakbun=201011002/name=이성계/tel=010-2222-3333/jumin=980101-2345678/address=서울시
-hakbun=201011003/name=이도/tel=010-3333-4444/jumin=010505-3456789/address=광주시
-hakbun=201011004/name=이산/tel=010-4444-5555/jumin=010303-4567890/address=대구시
-hakbun=201011005/name=이금/tel=010-5555-6666/jumin=880101-1234560/address=대전시
