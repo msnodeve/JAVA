@@ -116,3 +116,33 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
     > Server의 /usr/tomcat/bin > ./shutdown.sh > ./startup.sh
     > java Client
 ```
+
+### 06.JSON을 이용해 서블릿 통신하기
+<p>사전 작업이 필요합니다.</p>
+
+- 03.데이터베이스 내용 출력하기, 04.서블릿을 통해 받아온 내용 출력하기 프로젝트를 먼저 수행하세요.
+- Clinet(내 컴퓨터), Server(서버 컴퓨터)에서 둘 다 컴파일이 가능하게 하기 위해서 다음 jar 파일을 다운로드 해주세요.
+- [jacksonJAR파일다운!](https://mvnrepository.com/search?q=jackson)
+- (1. Jackson Databind, 2. Jackson Core, 3. Jackson Annotations) 3개를 다운로드 해주세요.
+- 본 프로젝트(#06)를 실행하는 방법에 대해 잘 모르신다면 다음 링크를 따라 해주세요.<br>
+[우리 함께 JSON으로 Servlet 통신을 해봅시다!](https://www.youtube.com/playlist?list=PLnae-xjNaVaYND3eKBV4DXrLOQBeXmwyl)<br>
+```
+    Server(서버 컴퓨터)에서 수행해야할 작업입니다!
+    > /usr/java/jdk1.8.0_211-amd64/jre/lib/ext > 다운로드 받은 파일 3개 Copy
+    Client(내 컴퓨터)에서 수행해야할 작업입니다!
+    > C:\Program Files\Java\jdk1.8.0_191\jre\lib\ext > 다운로드 받은 파일 3개 Copy
+    > C:\Program Files\Java\jre1.8.0_191\lib\ext > 다운로드 받은 파일 3개 Copy
+
+```
+
+```
+    자신의 Server On > mysql start
+    06.JSON을 이용해 서블릿 통신하기 > cmd(명령 프롬프트) 실행
+    > javac *.java
+    > Server의 /usr/tomcat/webapps/ROOT/WEB-INF/classes 에 ServletJson.class, Person.class를 Copy
+    > Server의 /usr/tomcat/bin > ./shutdown.sh > ./startup.sh
+    > java Client
+```
+<p>질문 : JSON으로 통신한다면서 왜 Person.java 클래스가 있는거죠?!?<br>
+답 : Client.java 코드를 보시면 아시겠지만 Person 객체를 이용한 코드는 전혀없습니다. 따라서 Server에만 Person객체를 이용하도록 되어있습니다.<br>
+이전 까지의 프로젝젝트는 Client, Server 둘다 person 객체를 이용 했지만 이 프로젝트는 Server에서만 이용한 것을 알 수 있습니다.</p>
