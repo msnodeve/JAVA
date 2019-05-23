@@ -8,7 +8,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 public class Client{
     public static void main(String[] args) throws Exception{
         // Tomcat의 ServletJson 별명을 가진 클래스를 실행
-        URL url= new URL("http://192.168.177.129/ServletJson");
+        URL url= new URL("http://localhost:1000/ServletJson");
         HttpURLConnection connection = (HttpURLConnection)url.openConnection();
 		connection.setDoOutput(true);
 		connection.setDoInput(true);
