@@ -1,5 +1,5 @@
 
-//
+// Person에서 넘겨준 Data를 Manager에서 Thread를 돌려 객체하나를 Map에저장
 public class PersonManager extends Thread{
     protected HashMap<String, Person> maps;
 
