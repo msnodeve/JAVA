@@ -1,5 +1,5 @@
+import java.util.*;
 import java.io.Serializable;
-import java.util.HashMap;
 
 // Person 객체를 담을 클래스
 public class Person implements Serializable{
@@ -58,7 +58,7 @@ public class Person implements Serializable{
 	}
 
 	public String[] getKeys() {
-		Set<String> keys = data.keySet();
+		Set<String> keys = map.keySet();
 		return (String[]) keys.toArray(new String[0]);
 	}
 }

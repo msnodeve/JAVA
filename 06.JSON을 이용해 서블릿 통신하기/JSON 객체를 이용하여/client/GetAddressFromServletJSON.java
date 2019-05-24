@@ -50,7 +50,6 @@ public class GetAddressFromServletJSON extends PersonManager{
 				Person person = new Person();
 				while(fieldNames.hasNext()) {
 					String fieldName = fieldNames.next();
-					System.out.println(fieldName+"="+node.get(fieldName).asText());
 					person.setData(fieldName,node.get(fieldName).asText());
 				}
 				persons.add(person);
