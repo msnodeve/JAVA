@@ -137,7 +137,7 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 
 ```
 
-<strong>Map 객체 이용하는 내용은 언급하지 않도록 하겠습니다.</strong>
+<strong><del>Map 객체 이용해서 통신하는 방법은 혼자 공부해보시길 바랍니다!</del></strong>
 
 ```
     자신의 Server On > mysql start
