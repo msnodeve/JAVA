@@ -52,6 +52,7 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 - DB Connector jar 파일이 외부 라이브러리에 포함 되어 있어야합니다.
 
 <p> Client(내 컴퓨터)에서 수행해야할 작업입니다! </p>
+
 ```
     https://www.mysql.com/ > downloads > Community > MySQL Connectors > Connector/J
     > Select Operaing System : Platform Independent
