@@ -130,10 +130,10 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 - Clinet(내 컴퓨터), Server(서버 컴퓨터)에서 둘 다 컴파일이 가능하게 하기 위해서 다음 jar 파일을 다운로드 해주세요.
 - [jackson JAR 파일다운!](https://mvnrepository.com/search?q=jackson)
 - (1. Jackson Databind, 2. Jackson Core, 3. Jackson Annotations) 3개를 다운로드 해주세요.
-<!-->
+<!--
 - 본 프로젝트(#06)를 실행하는 방법에 대해 잘 모르신다면 다음 링크를 따라 해주세요.<br>(아직 강의 영상을 찍지 못했음.)<br>
 [우리 함께 JSON으로 Servlet 통신을 해봅시다!](https://www.youtube.com/playlist?list=PLnae-xjNaVaYND3eKBV4DXrLOQBeXmwyl)<br>
-<-->
+-->
 
 <p> Server(서버 컴퓨터)에서 수행해야할 작업입니다! </p>
 
