@@ -79,6 +79,7 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 이유 : 03.프로젝트는 Client에서 DB를 접속해서 컴퓨터 DB Connector를 포함했지만 이제 Server에서 Server 내부에있는 DB에 접속해야하기 때문에 Server에 DB Connector를 포함해야합니다.
 
 <p> Server(서버 컴퓨터)에서 수행해야할 작업입니다! </p>
+
 ```
     firefox > https://www.mysql.com/ > downloads > Community > MySQL Connectors > Connector/J
     > Select Operaing System : Platform Independent
@@ -106,6 +107,7 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 이유 : 04.프로젝트는 Server에서 DB를 접속해서 서버 DB Connector를 포함했지만 이제 Server에서 Servlet 코드를 작성해 컴파일 해야 하기 때문에  Server에 servlet-api jar 파일이 필요합니다.
 
 <p> Server(서버 컴퓨터)에서 수행해야할 작업입니다! </p>
+
 ```
     > /usr/tomcat/lib > servlet-api.jar Copy
     > /usr/java/jdk1.8.0_211-amd64/jre/lib/ext 위치에 붙여넣기
@@ -134,10 +136,12 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 <-->
 
 <p> Server(서버 컴퓨터)에서 수행해야할 작업입니다! </p>
+
 ```
     > /usr/java/jdk1.8.0_211-amd64/jre/lib/ext > 다운로드 받은 파일 3개 Copy
 ```
 <p> Client(내 컴퓨터)에서 수행해야할 작업입니다! </p>
+
 ```
     > C:\Program Files\Java\jdk1.8.0_191\jre\lib\ext > 다운로드 받은 파일 3개 Copy
     > C:\Program Files\Java\jre1.8.0_191\lib\ext > 다운로드 받은 파일 3개 Copy
@@ -158,6 +162,7 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 <p>사전 작업이 필요합니다.</p>
 
 - jax-ws 다운로드 합시다. [jax-ws 다운로드!](https://javaee.github.io/metro-jax-ws/)
+
 ```
     Download > Unzip
 
@@ -166,16 +171,20 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 ```
 
 <p> Client(내 컴퓨터)에서 수행해야할 작업입니다! </p>
+
 ```
     07.XML을 이용해서 통신하기 > project > cmd(명령 프롬프트) 실행
     > javac -d WEB-INF/classes *.java
     > jar cvf hello.war WEB-INF
 ```
 <p> Server(서버 컴퓨터)에서 수행해야할 작업입니다! </p>
+
+```
     Client(내 컴퓨터)에서 압축시킨 hello.war파일을 > /usr/apache-tomcat-8.5.40/webapps 에 Copy
     > /usr/apache-tomcat-8.5.40/webapps > ./startup.sh > hello 폴더 생성됨을 확인
 ```
 <p> Client(내 컴퓨터)에서 수행해야할 작업입니다! </p>
+
 ```
     07.XML을 이용해서 통신하기 > project > client > cmd(명령 프롬프트) 실행
     > javac *.java
