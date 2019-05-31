@@ -50,8 +50,9 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 - 서버가 없고, 서버를 어떻게 만들어야하는지 모르시면 다음 링크를 따라 해주세요.<br>
 [우리 함께 서버를 구축합시다!](https://www.youtube.com/playlist?list=PLnae-xjNaVaYND3eKBV4DXrLOQBeXmwyl)
 - DB Connector jar 파일이 외부 라이브러리에 포함 되어 있어야합니다.
+
+<p> Client(내 컴퓨터)에서 수행해야할 작업입니다! </p>
 ```
-    Client(내 컴퓨터)에서 수행해야할 작업입니다!
     https://www.mysql.com/ > downloads > Community > MySQL Connectors > Connector/J
     > Select Operaing System : Platform Independent
     > Platform Independent (Architecture Independent), ZIP Archive Download
@@ -75,8 +76,9 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 [우리 함께 Tomcat에 대해서 알아봅시다!](https://www.youtube.com/playlist?list=PLnae-xjNaVaYND3eKBV4DXrLOQBeXmwyl)
 - DB Connector jar 파일이 Server의 외부 라이브러리에 또 포함 되어 있어야합니다.<br>
 이유 : 03.프로젝트는 Client에서 DB를 접속해서 컴퓨터 DB Connector를 포함했지만 이제 Server에서 Server 내부에있는 DB에 접속해야하기 때문에 Server에 DB Connector를 포함해야합니다.
+
+<p> Server(서버 컴퓨터)에서 수행해야할 작업입니다! </p>
 ```
-    Server(서버 컴퓨터)에서 수행해야할 작업입니다!
     firefox > https://www.mysql.com/ > downloads > Community > MySQL Connectors > Connector/J
     > Select Operaing System : Platform Independent
     > Platform Independent (Architecture Independent), ZIP Archive Download
@@ -101,8 +103,9 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 [우리 함께 Servlet에 대해서 알아봅시다!](https://www.youtube.com/playlist?list=PLnae-xjNaVaYND3eKBV4DXrLOQBeXmwyl)
 - servlet-api jar 파일이 Server의 외부 라이브러리에 또 포함 되어 있어야합니다.<br>
 이유 : 04.프로젝트는 Server에서 DB를 접속해서 서버 DB Connector를 포함했지만 이제 Server에서 Servlet 코드를 작성해 컴파일 해야 하기 때문에  Server에 servlet-api jar 파일이 필요합니다.
+
+<p> Server(서버 컴퓨터)에서 수행해야할 작업입니다! </p>
 ```
-    Server(서버 컴퓨터)에서 수행해야할 작업입니다!
     > /usr/tomcat/lib > servlet-api.jar Copy
     > /usr/java/jdk1.8.0_211-amd64/jre/lib/ext 위치에 붙여넣기
 ```
@@ -122,21 +125,22 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
 
 - 03.데이터베이스 내용 출력하기, 04.서블릿을 통해 받아온 내용 출력하기 프로젝트를 먼저 수행하세요.
 - Clinet(내 컴퓨터), Server(서버 컴퓨터)에서 둘 다 컴파일이 가능하게 하기 위해서 다음 jar 파일을 다운로드 해주세요.
-- [jacksonJAR파일다운!](https://mvnrepository.com/search?q=jackson)
+- [jackson JAR 파일다운!](https://mvnrepository.com/search?q=jackson)
 - (1. Jackson Databind, 2. Jackson Core, 3. Jackson Annotations) 3개를 다운로드 해주세요.
 <!-->
 - 본 프로젝트(#06)를 실행하는 방법에 대해 잘 모르신다면 다음 링크를 따라 해주세요.<br>(아직 강의 영상을 찍지 못했음.)<br>
 [우리 함께 JSON으로 Servlet 통신을 해봅시다!](https://www.youtube.com/playlist?list=PLnae-xjNaVaYND3eKBV4DXrLOQBeXmwyl)<br>
 <-->
+
+<p> Server(서버 컴퓨터)에서 수행해야할 작업입니다! </p>
 ```
-    Server(서버 컴퓨터)에서 수행해야할 작업입니다!
     > /usr/java/jdk1.8.0_211-amd64/jre/lib/ext > 다운로드 받은 파일 3개 Copy
-    Client(내 컴퓨터)에서 수행해야할 작업입니다!
+```
+<p> Client(내 컴퓨터)에서 수행해야할 작업입니다! </p>
+```
     > C:\Program Files\Java\jdk1.8.0_191\jre\lib\ext > 다운로드 받은 파일 3개 Copy
     > C:\Program Files\Java\jre1.8.0_191\lib\ext > 다운로드 받은 파일 3개 Copy
-
 ```
-
 <strong><del>Map 객체 이용해서 통신하는 방법은 혼자 공부해보시길 바랍니다!</del></strong>
 
 ```
@@ -146,5 +150,33 @@ CentOS 7의 Tomcat으로 Servlet HTTP 통신을 목적을 두고 있습니다.</
     > Server의 /usr/tomcat/webapps/ROOT/WEB-INF/classes 에 AddressServletJSON.class, Person.class를 Copy
     > Server의 /usr/tomcat/bin > ./shutdown.sh > ./startup.sh
     06.JSON을 이용해 서블릿 통신하기 > JSON 객체를 이용하여 > client > cmd(명령 프롬프트) 실행
+    > java Client
+```
+
+### 07.XML을 이용해서 통신하기
+<p>사전 작업이 필요합니다.</p>
+
+- jax-ws 다운로드 합시다. [jax-ws 다운로드!](https://javaee.github.io/metro-jax-ws/)
+```
+    Download > Unzip
+
+    Server(서버 컴퓨터)
+    > /usr/apache-tomcat-8.5.40/lib 에 Unzip한 jar 파일 복사
+```
+
+<p> Client(내 컴퓨터)에서 수행해야할 작업입니다! </p>
+```
+    07.XML을 이용해서 통신하기 > project > cmd(명령 프롬프트) 실행
+    > javac -d WEB-INF/classes *.java
+    > jar cvf hello.war WEB-INF
+```
+<p> Server(서버 컴퓨터)에서 수행해야할 작업입니다! </p>
+    Client(내 컴퓨터)에서 압축시킨 hello.war파일을 > /usr/apache-tomcat-8.5.40/webapps 에 Copy
+    > /usr/apache-tomcat-8.5.40/webapps > ./startup.sh > hello 폴더 생성됨을 확인
+```
+<p> Client(내 컴퓨터)에서 수행해야할 작업입니다! </p>
+```
+    07.XML을 이용해서 통신하기 > project > client > cmd(명령 프롬프트) 실행
+    > javac *.java
     > java Client
 ```
